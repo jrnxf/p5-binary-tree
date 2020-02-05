@@ -10,6 +10,5 @@ class Node {
   setCoords = (x, y) => {
     this.x = x;
     this.y = y;
-    text(this.val, x, y);
   };
 }
