@@ -25,7 +25,7 @@ class Tree {
   }
 
   redraw() {
-    background('#43AEDD');
+    background("#43AEDD");
 
     const dfsRedraw = (node = this.root, parent) => {
       if (!node) return;
@@ -47,8 +47,9 @@ class Tree {
     this.prepareTreeForInsert(this.root, nodeToInsert.val);
 
     if (!this.root) {
-      nodeToInsert.setCoords(500, 50);
+      nodeToInsert.setCoords(10000 / 2, 50);
       this.root = nodeToInsert;
+      this.redraw();
       return this;
     }
 

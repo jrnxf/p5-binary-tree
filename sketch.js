@@ -1,25 +1,19 @@
 function setup() {
-  createCanvas(1000, 1000);
-  background('#80130A');
-  stroke('#ffffff');
-  strokeWeight(4);
-  textStyle(BOLD);
-  textSize(14);
-  textFont('Nunito');
-
+  createCanvas(10000, 10000);
+	stroke('#ffffff')
+  background("#43AEDD");
   const tree = new Tree();
 
-  tree
-    .insert(new Node(10))
-    .insert(new Node(5))
-    .insert(new Node(15));
+  tree;
 
   console.log(tree);
 
-  document.getElementById('insertNode').addEventListener('submit', e => {
+  document.getElementById("insertNode").addEventListener("submit", e => {
     e.preventDefault();
     tree.insert(new Node(parseInt(e.target.node.value, 10)));
     tree.bfs();
-    // e.target.node.value = null;
+//    e.target.node.value = null;
   });
+	
+window.scrollTo(5000,0)
 }
